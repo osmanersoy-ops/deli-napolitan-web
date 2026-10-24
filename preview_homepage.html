@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>deli. napolitan | Pizza Cuisine</title>
+  
+  <meta name="description" content="deli. napolitan — neo-neapolitan recipes with local delicatessen. Moda, Kadıköy / İstanbul.">
+  <meta name="theme-color" content="#F5F5DC">
+  <link rel="icon" type="image/png" href="/assets/logo.png">
+
+  <!-- OpenGraph / Sosyal Medya Önizleme -->
+  <meta property="og:title" content="deli. napolitan | Pizza Cuisine">
+  <meta property="og:description" content="neo-neapolitan recipes with local delicatessen • Moda, Kadıköy">
+  <meta property="og:image" content="/assets/logo.png">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================
+       DELI NAPOLITAN - RESMİ WEB SİTESİ
+       Renkler: Krem (#F5F5DC) & İtalyan Orman Yeşili (#31543E)
+       Minimalist, Klas & Mobil Öncelikli
+       ========================================================== */
+
+    :root {
+      --dn-cream: #F5F5DC;
+      --dn-green: #31543E;
+      --dn-green-dark: #223B2B;
+      --dn-green-muted: rgba(49, 84, 62, 0.7);
+      --dn-border-subtle: rgba(49, 84, 62, 0.22);
+      --dn-border-hover: rgba(49, 84, 62, 0.85);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      background-color: var(--dn-cream);
+      color: var(--dn-green);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100vh;
+      min-height: 100dvh;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .dn-luxury-portal {
+      width: 100%;
+      min-height: 100vh;
+      min-height: 100dvh;
+      background-color: var(--dn-cream);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: clamp(36px, 7vh, 64px) 24px clamp(28px, 5vh, 44px);
+      box-sizing: border-box;
+    }
+
+    .dn-center-stage {
+      width: 100%;
+      max-width: 340px;
+      margin: auto 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* ----------------------------------------------------
+       1. LOGO VE MOTTO
+       ---------------------------------------------------- */
+    .dn-logo-box {
+      margin-bottom: clamp(32px, 5vh, 44px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .dn-logo-img {
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      object-fit: cover;
+      display: block;
+      box-shadow: 0 10px 28px rgba(49, 84, 62, 0.12);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .dn-logo-box:hover .dn-logo-img {
+      transform: scale(1.03);
+    }
+
+    .dn-motto {
+      margin-top: 15px;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.4;
+      color: var(--dn-green-muted);
+      letter-spacing: 0.015em;
+      max-width: 260px;
+    }
+
+    /* ----------------------------------------------------
+       2. BUTONLAR (Klas, İnce Düşünülmüş Tipografi)
+       ---------------------------------------------------- */
+    .dn-nav-stack {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .dn-btn {
+      width: 100%;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 50px;
+      transition: all 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+
+    /* Birincil Buton: Dolu Koyu Yeşil */
+    .dn-btn-solid {
+      background-color: var(--dn-green);
+      color: var(--dn-cream);
+      border: 1px solid var(--dn-green);
+      box-shadow: 0 4px 14px rgba(49, 84, 62, 0.16);
+    }
+
+    .dn-btn-solid:hover {
+      background-color: var(--dn-green-dark);
+      border-color: var(--dn-green-dark);
+      transform: translateY(-1.5px);
+      box-shadow: 0 6px 18px rgba(49, 84, 62, 0.24);
+    }
+
+    .dn-btn-solid:active {
+      transform: scale(0.985);
+    }
+
+    /* İkincil Buton: İnce Yeşil Çizgili */
+    .dn-btn-outline {
+      background-color: transparent;
+      color: var(--dn-green);
+      border: 1px solid var(--dn-border-subtle);
+    }
+
+    .dn-btn-outline:hover {
+      border-color: var(--dn-border-hover);
+      background-color: rgba(49, 84, 62, 0.04);
+      transform: translateY(-1.5px);
+    }
+
+    .dn-btn-outline:active {
+      transform: scale(0.985);
+    }
+
+    /* Çalışma Saatleri (Klas & Editoryal) */
+    .dn-hours {
+      margin-top: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      font-size: 11.5px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--dn-green-muted);
+    }
+
+    .dn-hours-time {
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: var(--dn-green);
+    }
+
+    /* ----------------------------------------------------
+       3. EDİTORYAL ALT BÖLÜM (Bağlantılar Çizginin Üstünde)
+       ---------------------------------------------------- */
+    .dn-footer-minimal {
+      width: 100%;
+      max-width: 340px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      padding-top: 20px;
+    }
+
+    /* Çizginin Üstündeki Bağlantılar */
+    .dn-links-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .dn-text-link {
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--dn-green-muted);
+      text-decoration: none;
+      position: relative;
+      transition: color 0.2s ease;
+      padding-bottom: 2px;
+    }
+
+    .dn-text-link::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 1px;
+      background-color: var(--dn-green);
+      transition: width 0.24s ease;
+    }
+
+    .dn-text-link:hover {
+      color: var(--dn-green);
+    }
+
+    .dn-text-link:hover::after {
+      width: 100%;
+    }
+
+    .dn-dot {
+      font-size: 10px;
+      color: var(--dn-border-subtle);
+      user-select: none;
+    }
+
+    /* İnce Ayraç Çizgi */
+    .dn-hairline {
+      width: 36px;
+      height: 1px;
+      background-color: var(--dn-border-subtle);
+      margin: 2px 0;
+    }
+
+    /* Çizginin Altındaki Lokasyon */
+    .dn-location-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--dn-green);
+      opacity: 0.45;
+    }
+
+    /* Mobil Ekran İyileştirmesi */
+    @media (max-height: 640px) {
+      .dn-luxury-portal {
+        padding-top: 28px;
+        padding-bottom: 20px;
+      }
+      .dn-logo-box {
+        margin-bottom: 24px;
+      }
+      .dn-logo-img {
+        width: 82px;
+        height: 82px;
+      }
+      .dn-motto {
+        margin-top: 10px;
+        font-size: 12px;
+      }
+      .dn-btn {
+        height: 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="dn-luxury-portal">
+    
+    <!-- ORTA ALAN: LOGO, MOTTO VE BUTONLAR -->
+    <div class="dn-center-stage">
+      
+      <!-- LOGO & MOTTO -->
+      <div class="dn-logo-box">
+        <img 
+          src="/assets/logo.png" 
+          onerror="this.src='https://basvuru.delinapolitan.com/logo.png'"
+          alt="deli. napolitan" 
+          class="dn-logo-img"
+          loading="eager"
+        >
+        <p class="dn-motto">neo-neapolitan recipes with local delicatessen</p>
+      </div>
+
+      <!-- BUTONLAR -->
+      <nav class="dn-nav-stack">
+        <a href="https://qrmenu.delinapolitan.com/" class="dn-btn dn-btn-solid" target="_blank" rel="noopener">
+          TR Menü &bull; EN Menu
+        </a>
+
+        <a href="https://basvuru.delinapolitan.com/" class="dn-btn dn-btn-outline" target="_blank" rel="noopener">
+          Kariyer
+        </a>
+      </nav>
+
+      <!-- ÇALIŞMA SAATLERİ (Klas & Editoryal) -->
+      <div class="dn-hours">
+        <span>Her Gün &bull; Every Day</span>
+        <span class="dn-dot">&bull;</span>
+        <span class="dn-hours-time">11:30 – 22:00</span>
+      </div>
+
+    </div>
+
+    <!-- ALT ALAN: ÇİZGİNİN ÜSTÜNDE BAĞLANTILAR & ALTINDA LOKASYON -->
+    <footer class="dn-footer-minimal">
+      
+      <!-- 1. Çizginin Üstündeki Bağlantılar -->
+      <div class="dn-links-row">
+        <a href="https://www.instagram.com/delinapolitan/" target="_blank" rel="noopener" class="dn-text-link">
+          Instagram
+        </a>
+        <span class="dn-dot">&bull;</span>
+        <a href="https://maps.app.goo.gl/zjA1YCNDyMZvTTFB9" target="_blank" rel="noopener" class="dn-text-link">
+          Google 4.5
+        </a>
+      </div>
+
+      <!-- 2. Zarif Çizgi -->
+      <div class="dn-hairline"></div>
+
+      <!-- 3. Çizginin Altındaki Lokasyon -->
+      <div class="dn-location-label">
+        Moda &bull; Kadıköy
+      </div>
+
+    </footer>
+
+  </main>
+
+</body>
+</html>
